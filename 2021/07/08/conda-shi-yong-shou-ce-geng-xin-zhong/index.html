@@ -18,9 +18,19 @@
   <meta name="author" content="BigBrotherChou">
   <meta name="keywords" content="">
   
-  <title>归档 - PorridgeZ</title>
+  <title>Conda使用手册(更新中) - PorridgeZ</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +58,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -142,14 +152,51 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/banner.jpeg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="Conda使用手册(更新中)">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-08 22:00" pubdate>
+        2021年7月8日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      218 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -162,40 +209,116 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 13 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/05/12/java-nei-bu-lei/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Java内部类</span>
-      <time style="float: right;">05-12</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Conda使用手册(更新中)</h1>
+            
+            <div class="markdown-body">
+              <h3 id="查看Conda配置信息命令"><a href="#查看Conda配置信息命令" class="headerlink" title="查看Conda配置信息命令"></a>查看Conda配置信息命令</h3><ol>
+<li><p><code>conda env list</code> 查看本机的Conda环境命令</p>
+<pre><code># conda environments:
+#
+base       *  /Users/zhouyaoze/opt/anaconda3</code></pre><p>其中bese环境是默认的环境，也就是安装完Conda后就会产生的环境。‘*’代表当前正在使用的环境，后面的路径表示此环境保存的路径。</p>
+</li>
+<li><p><code>conda list</code>查看当前环境下的Python包</p>
+</li>
+<li><p><code>conda -V</code>查看当前使用的Conda版本号</p>
+</li>
+</ol>
+<hr>
+<h3 id="添加修改删除Conda环境命令"><a href="#添加修改删除Conda环境命令" class="headerlink" title="添加修改删除Conda环境命令"></a>添加修改删除Conda环境命令</h3><ol>
+<li><p><code>conda create --name env_name python= 3.x</code>创建制定版本的python环境</p>
+<p><code>conda create --name env_name python=3.x numpy</code>可以创建指定python版本下包含某些包的环境</p>
+</li>
+<li><p><code>activate env_name</code>将当前环境切换到指定环境</p>
+<p>在某些系统中需要使用<code>source activate env_name</code>进行激活环境</p>
+</li>
+<li><p><code>deactivate</code>退出当前环境</p>
+</li>
+<li><p><code>conda remove --name env_name --all</code>删除指定环境</p>
+</li>
+<li><p><code>conda create --name new_env_name --clone old_env_name</code>克隆某个环境</p>
+</li>
+</ol>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Python/">Python</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Python/">Python</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Conda/">Conda</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/10/mybatis-shi-xian-duo-shu-ju-yuan-cao-zuo/">
+                        <span class="hidden-mobile">Mybatis实现多数据源操作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -273,9 +396,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 

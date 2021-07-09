@@ -167,8 +167,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-07-20 14:58" pubdate>
-        2020年7月20日 下午
+      <time datetime="2020-09-20 14:58" pubdate>
+        2020年9月20日 下午
       </time>
     </span>
   
@@ -179,7 +179,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      550 字
+      566 字
     </span>
   
 
@@ -222,13 +222,18 @@
             <h1 style="display: none">剑指Offer算法篇（一）</h1>
             
             <div class="markdown-body">
-              <h3 id="1、在一个二维数组中，每一行都是按照从左到右递增的顺序排序，每一列都是按照从上到下的递增的顺序排列。完成一个数据的判断函数，要求输入一个这样的的数组，判断数组中是否有这样的整数。"><a href="#1、在一个二维数组中，每一行都是按照从左到右递增的顺序排序，每一列都是按照从上到下的递增的顺序排列。完成一个数据的判断函数，要求输入一个这样的的数组，判断数组中是否有这样的整数。" class="headerlink" title="1、在一个二维数组中，每一行都是按照从左到右递增的顺序排序，每一列都是按照从上到下的递增的顺序排列。完成一个数据的判断函数，要求输入一个这样的的数组，判断数组中是否有这样的整数。"></a>1、在一个二维数组中，每一行都是按照从左到右递增的顺序排序，每一列都是按照从上到下的递增的顺序排列。完成一个数据的判断函数，要求输入一个这样的的数组，判断数组中是否有这样的整数。</h3><h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><ol>
+              <h3 id="1、有序二维数组数据查找"><a href="#1、有序二维数组数据查找" class="headerlink" title="1、有序二维数组数据查找"></a>1、有序二维数组数据查找</h3><p>要求：在一个二维数组中，每一行都是按照从左到右递增的顺序排序，每一列都是按照从上到下的递增的顺序排列。完成一个数据的判断函数，要求输入一个这样的的数组，判断数组中是否有这样的整数。</p>
+<ul>
+<li><p>分析：</p>
+<ol>
 <li>首先选取数组中有上角的元素，如果该数字就是要找的数据，那么就直接返回了true；</li>
 <li>如果此时右上角的这个数大于被查找的数就忽略现在停留的这一列，index下标指向新的元素；</li>
 <li>如果此时右上角的这个数小于被查找的的数，就略现在停留的这一行，index下标指向新的元素；</li>
 <li>转像第一步；</li>
 </ol>
-<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+</li>
+<li><p>代码示例</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">,</span> <span class="token keyword">int</span> number<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 输入条件判断</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>matrix <span class="token operator">==</span> null <span class="token operator">||</span> matrix<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">1</span> <span class="token operator">||</span> matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>len gth <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span>
@@ -255,9 +260,19 @@
         <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<hr>
 <h3 id="2、查找字符串数组的最大公共前缀"><a href="#2、查找字符串数组的最大公共前缀" class="headerlink" title="2、查找字符串数组的最大公共前缀"></a>2、查找字符串数组的最大公共前缀</h3><p>要求：编写⼀个函数来查找字符串数组中的最⻓公共前缀。如果不存在公共前缀，返回空字符<br>串 “”。</p>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>查找最大前缀只需要</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExecutorDemo</span> <span class="token punctuation">{</span>
+<ul>
+<li><p>示例</p>
+<p><code>懒得写了</code> </p>
+</li>
+<li><p>分析</p>
+<p>查找最大前缀只需要</p>
+</li>
+<li><p>代码</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ExecutorDemo</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         String<span class="token punctuation">[</span><span class="token punctuation">]</span> strings<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span><span class="token string">"aoaad"</span><span class="token punctuation">,</span><span class="token string">"aa"</span><span class="token punctuation">,</span><span class="token string">"aaaaa"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">find</span><span class="token punctuation">(</span>strings<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -279,6 +294,9 @@
         <span class="token keyword">return</span> stringBuilder<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<hr>
 
             </div>
             <hr>
